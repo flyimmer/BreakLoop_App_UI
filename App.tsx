@@ -1,5 +1,8 @@
 // App.tsx (project root)
 
-import App from './src/App';
+import CauseCardPreview from './src/screens/CauseCardPreview';
 
-export default App;
+export default function App() {
+  return <CauseCardPreview />;
+}
+
