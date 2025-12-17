@@ -34,6 +34,14 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 **Used In:**
 - Main BreakLoop App (all main screens)
 
+**Tone: Ambient Hearth**
+- elevation: `elevation_1` (presence level; navigation must never be the visual hero)
+- border: none; uses elevation for separation
+- surface: `surface`
+- radius: none (edge-to-edge)
+- active indicator: `primary` underline or background fill, never high contrast
+- pressed: fade to `opacity_hover`, no bounce
+
 ---
 
 ### 1.2 SubMenuNav
@@ -65,6 +73,14 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - Alternatives Screen (My List, Discover, AI For You)
 - Add Friend Modal (Phone, Username)
 
+**Tone: Ambient Hearth**
+- elevation: `elevation_0` (inline with content)
+- border: none on tabs; subtle `divider` separator below bar if needed
+- surface: transparent, active uses `surfaceSecondary`
+- radius: `radius_8` on active tab background
+- active indicator: soft background fill, not underline
+- pressed: fade to `opacity_hover`
+
 ---
 
 ### 1.4 BackButton
@@ -80,6 +96,12 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - All modal screens
 - Intervention flow screens
 - Detail views
+
+**Tone: Ambient Hearth**
+- elevation: `elevation_0` (recedes into screen, never floats)
+- border: none (soft icon presence)
+- radius: `radius_full` for circular touch target
+- pressed: opacity fade to `opacity_hover`, no scale transform
 
 ---
 
@@ -123,6 +145,13 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - Active Session Override (badge)
 - Dummy App Screen (badge)
 
+**Tone: Ambient Hearth**
+- elevation: `elevation_2` for breathing/action, `elevation_0` for badge
+- border: none (uses `surfaceSecondary` + elevation for containment)
+- radius: `radius_full` for circular variants, `radius_8` for badge
+- animation: pulsing fade (opacity 1.0 ↔ 0.7), never ticking or counting jumps
+- motion: `duration_slower` for breathing rhythm
+
 ---
 
 ### 2.2 CauseCard
@@ -138,6 +167,13 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 
 **Used In:**
 - Root Cause Selection Screen
+
+**Tone: Ambient Hearth**
+- elevation: `elevation_1` when unselected, `elevation_2` when selected
+- border: never used; selection shown via elevation + surface change
+- surface: `surfaceSecondary` (unselected) → `surfaceGlass` (selected)
+- radius: `radius_16` (soft containment)
+- pressed: cross-dissolve surface transition, no scale or bounce
 
 ---
 
@@ -223,6 +259,15 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - Activity Details Modal
 - Alternatives Screen
 
+**Tone: Ambient Hearth**
+- elevation: `elevation_1` (ambient presence, never dominant)
+- border: none; uses `surfaceSecondary` + elevation for containment
+- surface: `surfaceSecondary` (visually recedes)
+- radius: `radius_16` (soft containment)
+- pressed: fade to `opacity_hover`, no hard feedback
+- avatar: `radius_full`, blends into card (never floats independently)
+- statusBadge: merges into surface via `surfaceGlass`, never overlay sticker
+
 ---
 
 ### 3.2 ActivitySuggestionCard
@@ -267,6 +312,13 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - Select Values Screen (onboarding)
 - Settings Screen (values configuration)
 
+**Tone: Ambient Hearth**
+- elevation: `elevation_1` (unselected) → `elevation_2` (selected)
+- border: none; selection via elevation + surface transition
+- surface: `surfaceSecondary` (unselected) → `surfaceGlass` (selected)
+- radius: `radius_16` (soft containment)
+- pressed: cross-dissolve surface transition, no bounce
+
 ---
 
 ### 3.4 FriendCard
@@ -296,6 +348,15 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 **Used In:**
 - Friends List Screen
 - Add Friend Modal
+
+**Tone: Ambient Hearth**
+- elevation: `elevation_1` (ambient presence)
+- border: none
+- surface: `surfaceSecondary`
+- radius: `radius_16` (soft containment)
+- avatar: `radius_full`, blends into card (never floats)
+- successRate: de-emphasized via `textMuted`, never gamified or comparison-focused
+- pressed: fade to `opacity_hover`
 
 ---
 
@@ -371,6 +432,14 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - Friend Detail Modal (notes field)
 - Chat Interface Modal
 
+**Tone: Ambient Hearth**
+- elevation: `elevation_0` (recedes into form)
+- border: generally forbidden on primary surfaces; exception: borders allowed for focused form fields (accessibility clarity)
+- surface: `surfaceSecondary`
+- radius: `radius_4` (minimal containment for inputs)
+- focused: border becomes `focus`, no elevation change
+- error: text color `danger`, no harsh visual emphasis
+
 ---
 
 ### 4.2 DatePicker
@@ -443,6 +512,14 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - Settings Screen (premium features, privacy settings)
 - Friend Detail Modal (favorite toggle)
 
+**Tone: Ambient Hearth**
+- elevation: `elevation_0` (inline with form)
+- border: none (borders generally forbidden; exceptions: destructive actions, focused form fields)
+- surface: `surfaceSecondary` (off) → `primary` (on)
+- radius: `radius_full` (pill-shaped track and thumb)
+- transition: cross-dissolve color change, no snap
+- disabled: `opacity_disabled`
+
 ---
 
 ### 4.6 NumberInput
@@ -496,6 +573,13 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - Activity Details Modal
 - My Upcoming Screen
 
+**Tone: Ambient Hearth**
+- elevation: `elevation_0` (merges into parent surface, never overlay sticker)
+- border: none
+- surface: `surfaceGlass` blended into card
+- radius: `radius_8` (control semantic)
+- color: uses `textSecondary` or muted semantic colors, never high-contrast badges
+
 ---
 
 ### 5.2 Toast
@@ -510,6 +594,14 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 
 **Used In:**
 - Throughout app for user feedback (activity saved, request sent, error messages)
+
+**Tone: Ambient Hearth**
+- elevation: `elevation_2` (focus layer for momentary feedback)
+- border: none
+- surface: `surfaceSecondary` with subtle semantic color tint
+- radius: `radius_16` (soft containment)
+- entrance: fade + gentle slide from bottom, no bounce
+- exit: fade out, no harsh dismiss
 
 ---
 
@@ -627,6 +719,14 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - Add Friend Modal
 - Chat Interface Modal
 
+**Tone: Ambient Hearth**
+- elevation: `elevation_2` (focus layer)
+- border: none on outer container
+- surface: `surface` (full-screen) or `surfaceSecondary` (centered)
+- radius: `radius_24` for centered modals
+- backdrop: `overlay` with blur on intervention modals, `overlaySoft` otherwise
+- transition: cross-dissolve entrance, no slide
+
 ---
 
 ### 6.2 Dialog
@@ -645,6 +745,15 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - Cancel event confirmation
 - Destructive action confirmations
 
+**Tone: Ambient Hearth**
+- elevation: `elevation_2` (focus layer)
+- border: none
+- surface: `surfaceSecondary`
+- radius: `radius_16` (soft containment)
+- backdrop: `overlay`
+- button spacing: generous `space_24` vertical rhythm
+- destructive actions: `danger` text color, no harsh visual weight
+
 ---
 
 ### 6.3 Overlay
@@ -662,9 +771,45 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - Intervention Flow (all screens)
 - Active Session Override Screen
 
+**Tone: Ambient Hearth**
+- elevation: `elevation_2` for content layer
+- surface: `surfaceGlass` (glassmorphism reserved for intervention context separation)
+- backdrop: `overlay` with blur
+- radius: `radius_16` for inner content cards
+- transition: cross-dissolve entrance, breathing-like fade
+
 ---
 
-### 6.4 IconButton
+### 6.4 Button
+
+**Purpose:** Primary action button
+
+**Key Props:**
+- `onPress: () => void` - Press handler
+- `label: string` - Button text
+- `variant?: "primary" | "secondary" | "destructive" | "ghost"` - Button style
+- `size?: "small" | "medium" | "large"` - Button size
+- `disabled?: boolean` - Disabled state
+- `loading?: boolean` - Loading state
+- `icon?: ReactNode` - Optional icon
+
+**Used In:**
+- Throughout app for primary actions
+- Form submissions
+- Confirmations
+
+**Tone: Ambient Hearth**
+- elevation: `elevation_1` (primary/secondary), `elevation_0` (ghost)
+- border: none on primary/secondary; subtle `divider` on ghost when needed
+- border exception: borders allowed only for destructive variant (error/destructive intent)
+- surface: `primary` (primary), `surfaceSecondary` (secondary), transparent (ghost)
+- radius: `radius_8` (control semantic)
+- pressed: fade to `opacity_hover`, no scale or bounce
+- disabled: `opacity_disabled` with no elevation change
+
+---
+
+### 6.5 IconButton
 
 **Purpose:** Touchable icon with optional label
 
@@ -682,9 +827,15 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - Add buttons
 - Navigation icons
 
+**Tone: Ambient Hearth**
+- elevation: `elevation_0` (never floats above surface)
+- border: none; ghost blends into background
+- radius: `radius_8` for square buttons, `radius_full` for circular
+- pressed: fade to `opacity_hover`, no hard feedback
+
 ---
 
-### 6.5 AppIcon
+### 6.6 AppIcon
 
 **Purpose:** Display app icon with consistent sizing
 
@@ -700,6 +851,32 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 - Select Monitored Apps Screen
 - Edit Apps Screen
 - Timer Selection Screen
+
+---
+
+### 6.7 Avatar
+
+**Purpose:** Display user avatar with consistent styling
+
+**Key Props:**
+- `userId: string` - User identifier
+- `imageUrl?: string` - Avatar image URL
+- `initials?: string` - Fallback initials
+- `size?: "small" | "medium" | "large"` - Avatar size
+- `onPress?: () => void` - Optional tap handler
+
+**Used In:**
+- Friend cards
+- Activity cards
+- Chat interface
+- Participant lists
+
+**Tone: Ambient Hearth**
+- elevation: `elevation_0` (blends into card, never floats independently)
+- border: none
+- radius: `radius_full` (human presence semantic)
+- surface: merges into parent surface
+- pressed: fade to `opacity_hover` when tappable
 
 ---
 
@@ -733,6 +910,13 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 
 **Used In:**
 - Wraps most card components (ActivityCard, FriendCard, etc.)
+
+**Tone: Ambient Hearth**
+- elevation: `elevation_1` (default), `elevation_2` (elevated)
+- border: forbidden on default/elevated; outline uses `divider` only
+- surface: `surfaceSecondary` for default, `surface` for elevated
+- radius: `radius_16` (soft containment)
+- pressed: fade to `opacity_hover` when touchable, no scale
 
 ---
 
@@ -902,6 +1086,39 @@ This document defines all reusable UI components for the BreakLoop mobile app, e
 
 **Used In:**
 - Insights Tab Screen
+
+---
+
+### 8.6 ChatBubble
+
+**Purpose:** Display individual chat message
+
+**Key Props:**
+- `message: Message` - Message data
+- `isCurrentUser: boolean` - Align left or right
+- `variant?: "default" | "focused"` - Display emphasis
+
+**Message Object:**
+```typescript
+{
+  id: string
+  senderId: string
+  text: string
+  timestamp: string
+}
+```
+
+**Used In:**
+- Chat Interface Modal
+- MessageList component
+
+**Tone: Ambient Hearth**
+- elevation: `elevation_0` (visually recedes unless focused)
+- border: none
+- surface: `surfaceSecondary` (visually recedes into background)
+- radius: `radius_16` (soft containment)
+- focused variant: uses `surfaceGlass` with `elevation_1` only when actively referenced
+- alignment: content-based, no hard edges or speech-bubble tails
 
 ---
 
