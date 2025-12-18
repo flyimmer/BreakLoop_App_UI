@@ -163,17 +163,32 @@ Visual separation (spacing, surfaces, dividers) must clearly indicate zone bound
 
 ## 5. Canonical Reference Screens
 
-The following screens are **authoritative references** for this specification.
+The following screens are **authoritative references** for this specification.  
 They live in `/design/references/gravity/`.
 
-- **why-instagram.png**  
-  Mixed gravity: Reflective Float + Grounded Transition + Heavy Override
+### Why Instagram?
+Mixed gravity: Reflective Float + Grounded Transition + Heavy Override  
+Reference: `why-instagram.png`
 
-- **countdown.png**  
-  Regulation Anchor (centered, non-decisional)
+### Countdown / Take a Breath
+Regulation Anchor (centered, non-decisional)  
+Reference: `countdown.png`
 
-- **alternatives-discover.png**  
-  Grounded Transition with Heavy Override
+### Alternatives — Discover
+Grounded Transition with Heavy Override  
+Reference: `alternatives-discover.png`
+
+### Alternatives — My List (Assisted Reflection)
+
+This screen is classified as **Reflective Float (assisted sourcing)**,  
+even when activities are present.
+
+**Reason:**
+- User intent is discovery, not decision.
+- Multiple sourcing paths (manual, discover, AI) are offered.
+- Applying Grounded Transition here would create competing gravity.
+
+Reference: `alternatives-my-list.png`
 
 These are not design inspiration.  
 They are behavioral reference points.
