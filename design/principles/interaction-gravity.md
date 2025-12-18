@@ -1,6 +1,23 @@
 # Interaction Gravity Specification  
 **BreakLoop — Phase B → Phase C Lock**
 
+## Scope
+
+This specification applies **only** to:
+- Conscious interruption flows
+- App interception moments
+- Time-sensitive, vulnerable decision points
+
+This specification does **not** apply to:
+- Retrospective insights
+- Planning and scheduling
+- Community and social browsing
+- Account, settings, or configuration screens
+
+Those areas follow standard product interaction patterns and are
+out of scope for interaction gravity.
+
+
 ---
 
 ## 0. Purpose
@@ -221,8 +238,8 @@ Only screens representing **pure user states** may be used to define gravity.
 - New gravity modes may not be invented
 - Visual polish must obey gravity, not override it
 - AI may apply gravity rules but may not reinterpret them
+- Exception paths (e.g. Quick Task) and exit confirmations must be visually muted and must not introduce reward framing
 
----
 
 ## 8. Review Requirement
 
